@@ -1,8 +1,8 @@
-require 'dotenv/load'
 require 'sinatra'
 require_relative 'hangman'
 
 if development?
+  require 'dotenv/load'
   require "better_errors"
   require 'pry'
   require 'sinatra/reloader'
