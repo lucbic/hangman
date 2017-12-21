@@ -1,0 +1,41 @@
+body {
+  background-image: url("../img/background.jpg");
+  background-repeat: repeat-xy;
+}
+
+img {
+  max-width: 100%;
+  max-height: 500px;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+#hanger {
+  text-align: center;
+}
+#word {
+  text-align: center;
+  /*padding-top: 10px;*/
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  font-size: 62px;
+}
+#bt {
+  padding-top: 5px;
+}
+#title {
+  margin: 0 0 0 0;
+}
+.won {
+  color: green;
+  font-weight: bold;
+}
+.fail {
+  color: red;
+  font-weight: bold;
+}
+.normal {
+  color: black;
+  font-weight: bold;
+}

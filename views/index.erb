@@ -1,14 +1,14 @@
 <div class="row" id="word">
   <!-- <div class="col-sm-12" > -->
-      <span><%= @hanger.get_temp_word %></span>
+      <span><%= @hangman.temp_word %></span>
   <!-- </div> -->
 </div>
 <div class="row">
   <div class="col-xs-2"></div>
   <div class="col-xs-4">
     <div class="well" id="guess_form">
-      <p class="<%= @hanger.message_style %>"> <%= @hanger.message %> </p>
-      <% if !@hanger.game_over %>
+      <p class="<%= @hangman.message_style %>"> <%= @hangman.message %> </p>
+      <% unless @hangman.game_over %>
       <form method="post" action="/guess">
         <div class="form-group" name="f1">
           <input type="text" name="guess" class="form-control" autofocus>
@@ -19,11 +19,11 @@
       </form>
       <% end %>
 
-      <% if @hanger.try > 0 %> <p> <%= @hanger.get_misses %> </p> <% end %>
+      <% if @hangman.try > 0 %> <p> <%= @hangman.misses %> </p> <% end %>
     </div>
   </div>
-  <div class="col-xs-4" id="hanger">
-      <img src="img/hang_<%= @hanger.try %>.png" alt="Hanger">
+  <div class="col-xs-4" id="hangman">
+      <img src="img/hang_<%= @hangman.try %>.png" alt="hangman">
   </div>
   <div class="col-xs-2"></div>
 </div>

@@ -16,15 +16,15 @@ configure do
 end
 
 get '/' do
-  unless session["hanger"]
-    session["hanger"] = Hangman.new
+  unless session["hangman"]
+    session["hangman"] = Hangman.new
   end
-  @hanger = session["hanger"]
+  @hangman = session["hangman"]
   erb :index
 end
 
 post '/guess' do
-  session["hanger"].iteration(params[:guess])
+  session["hangman"].iterate(params[:guess])
   redirect "/"
 end
 

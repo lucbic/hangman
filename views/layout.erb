@@ -2,53 +2,15 @@
 <html>
   <head>
     <title>Hangman</title>
-    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap.min.css" />
-    <style>
-      img {
-        max-width: 100%;
-        max-height: 500px;
-      }
-      #header {
-        display: flex;
-        justify-content: space-between;
-      }
-      #hanger {
-        text-align: center;
-      }
-      #word {
-        text-align: center;
-        padding: 25px 0 50px 0;
-        font-family: 'Rock Salt', cursive;
-        font-size: 60px;
-      }
-      #bt {
-        padding-top: 5px;
-      }
-      #title {
-        margin: 0 0 0 0;
-      }
-      .won {
-        color: green;
-        font-weight: bold;
-      }
-      .fail {
-        color: red;
-        font-weight: bold;
-      }
-      .normal {
-        color: black;
-        font-weight: bold;
-      }
-
-
-      /*#guess_form {max-width: 300px;}*/
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/style.css" />
   </head>
   <body class="container">
+
     <div class="row">
-      <div class="col-xs-2"></div>
-      <div class="col-xs-8">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
         <div class="well" id="header">
           <h1 id="title">Hangman</h1>
           <form method="post" action="/reset" id="bt">
@@ -56,7 +18,7 @@
           </form>
         </div>
       </div>
-      <div class="col-xs-2"></div>
+      <div class="col-sm-2"></div>
     </div>
     <%= yield %>
   </body>
